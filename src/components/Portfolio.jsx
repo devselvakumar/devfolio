@@ -84,12 +84,12 @@ export default function Portfolio() {
               <span className="text-gradient">Projects</span>
             </h2>
             {/* Filter tabs */}
-            <div className="flex items-center gap-2 flex-wrap">
+            <div className="flex items-center gap-2 overflow-x-auto whitespace-nowrap no-scrollbar pb-1 w-full md:w-auto">
               {categories.map((cat) => (
                 <button
                   key={cat}
                   onClick={() => setFilter(cat)}
-                  className={`px-4 py-2 rounded-full text-xs font-mono font-medium transition-all duration-200 ${
+                  className={`px-4 py-2 rounded-full text-[11px] sm:text-xs font-mono font-medium transition-all duration-200 flex-shrink-0 ${
                     filter === cat
                       ? 'bg-accent text-white shadow-md shadow-blue-200'
                       : 'bg-gray-100 text-gray-500 hover:bg-blue-50 hover:text-accent'

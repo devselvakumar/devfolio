@@ -76,12 +76,12 @@ export default function Contact() {
                     {href ? (
                       <a
                         href={href}
-                        className="font-body text-sm font-medium text-gray-700 hover:text-accent transition-colors"
+                        className="font-body text-sm font-medium text-gray-700 hover:text-accent transition-colors break-all"
                       >
                         {value}
                       </a>
                     ) : (
-                      <span className="font-body text-sm font-medium text-gray-700">{value}</span>
+                      <span className="font-body text-sm font-medium text-gray-700 break-all">{value}</span>
                     )}
                   </div>
                 </div>
@@ -96,14 +96,14 @@ export default function Contact() {
               animate={inView ? 'visible' : 'hidden'}
             >
               <p className="font-mono text-xs text-gray-400 uppercase tracking-widest mb-4">Find me on</p>
-              <div className="flex gap-3">
+              <div className="flex gap-3 flex-wrap">
                 {socials.map(({ icon: Icon, label, href, color }) => (
                   <motion.a
                     key={label}
                     href={href}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-white border border-gray-100 hover:border-gray-200 hover:shadow-md font-body text-sm font-medium text-gray-600 transition-all duration-200"
+                    className="flex items-center gap-2.5 px-3 py-2 sm:px-4 sm:py-2.5 rounded-xl bg-white border border-gray-100 hover:border-gray-200 hover:shadow-md font-body text-xs sm:text-sm font-medium text-gray-600 transition-all duration-200"
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.97 }}
                   >

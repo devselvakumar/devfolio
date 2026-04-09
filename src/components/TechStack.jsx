@@ -136,12 +136,12 @@ export default function TechStack() {
         </motion.div>
 
         {/* Icon grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 md:gap-5">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
           {stack.map(({ name, color, bg, svg }, i) => (
             <motion.div
               key={name}
               data-hover
-              className="group card-hover flex flex-col items-center gap-3 p-6 rounded-2xl border border-gray-100 bg-white hover:border-transparent cursor-none"
+              className="group card-hover flex flex-col items-center gap-3 p-5 sm:p-6 rounded-2xl border border-gray-100 bg-white hover:border-transparent cursor-none"
               style={{ '--tech-color': color }}
               variants={fadeUp}
               custom={i}

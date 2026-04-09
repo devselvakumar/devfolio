@@ -84,7 +84,7 @@ export default function Services() {
           {services.map(({ icon: Icon, title, shortDesc, desc, features, accentColor, bgLight, num }, i) => (
             <motion.div
               key={title}
-              className="group card-hover p-8 rounded-2xl bg-white border border-gray-100 relative overflow-hidden hover:border-transparent"
+              className="group card-hover p-6 sm:p-8 rounded-2xl bg-white border border-gray-100 relative overflow-hidden hover:border-transparent"
               style={{ '--accent': accentColor }}
               variants={fadeUp}
               custom={i}
@@ -99,7 +99,7 @@ export default function Services() {
 
               {/* Number */}
               <div
-                className="absolute top-6 right-8 font-sans font-bold text-5xl leading-none pointer-events-none select-none opacity-[0.06]"
+                className="absolute top-6 right-8 font-sans font-bold text-4xl sm:text-5xl leading-none pointer-events-none select-none opacity-[0.06]"
                 style={{ color: accentColor }}
               >
                 {num}

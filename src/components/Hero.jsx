@@ -87,7 +87,7 @@ export default function Hero() {
           <motion.h1
             variants={itemVariants}
             className="font-sans font-bold leading-[1.05] tracking-tighter mb-6"
-            style={{ fontSize: 'clamp(3rem, 8vw, 6.5rem)' }}
+            style={{ fontSize: 'clamp(2.5rem, 8vw, 6.5rem)' }}
           >
             <span className="text-gray-900">Crafting</span>
             <br />
