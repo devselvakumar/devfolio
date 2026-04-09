@@ -6,7 +6,7 @@
 
 A modern, responsive portfolio website showcasing my work as a web developer. Built with React, Vite, and Tailwind CSS, featuring smooth animations powered by Framer Motion.
 
-## ✨ Features
+##  Features
 
 - **Responsive Design**: Optimized for all devices and screen sizes
 - **Smooth Animations**: Powered by Framer Motion for engaging user experience
@@ -15,7 +15,7 @@ A modern, responsive portfolio website showcasing my work as a web developer. Bu
 - **SEO Optimized**: Proper meta tags and semantic HTML
 - **Contact Integration**: Easy-to-use contact form and social links
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Frontend**: React 18, JavaScript
 - **Build Tool**: Vite
@@ -24,7 +24,7 @@ A modern, responsive portfolio website showcasing my work as a web developer. Bu
 - **Icons**: Lucide React
 - **Fonts**: Google Fonts (Montserrat, Poppins, Playfair Display)
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -65,7 +65,7 @@ The built files will be in the `dist` directory.
 npm run preview
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 src/
@@ -85,7 +85,7 @@ src/
 └── main.jsx
 ```
 
-## 🤝 Contributing
+##  Contributing
 
 While this is a personal portfolio project, I'm open to suggestions and improvements. Feel free to:
 
@@ -95,14 +95,14 @@ While this is a personal portfolio project, I'm open to suggestions and improvem
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
 
-## 📞 Get Help
+##  Get Help
 
 If you have any questions or need help:
 
 - Open an issue on [GitHub](https://github.com/devselvakumar/selvakumar-portfolio/issues)
 - Contact me directly through the portfolio website
 
-## 👨‍💻 Author
+##  Author
 
 **Selvakumar M**
 - Web Developer
