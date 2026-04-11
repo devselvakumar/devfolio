@@ -68,7 +68,7 @@ export default function Hero() {
       ))}
 
       {/* Content */}
-      <div className="section-padding max-w-screen-xl mx-auto w-full pt-[120px] md:pt-[142px] pb-[70px] md:pb-[110px]">
+      <div className="section-padding max-w-screen-xl mx-auto w-full pt-[140px] md:pt-[162px] pb-[90px] md:pb-[130px]">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -87,7 +87,7 @@ export default function Hero() {
           <motion.h1
             variants={itemVariants}
             className="font-sans font-bold leading-[1.05] tracking-tighter mb-4 md:mb-6 mt-0"
-            style={{ fontSize: 'clamp(3rem, 10vw, 8.5rem)' }}
+            style={{ fontSize: 'clamp(2.5rem, 9.2vw, 8rem)' }}
           >
             <span className="text-gray-900">Crafting</span>
             <br />
