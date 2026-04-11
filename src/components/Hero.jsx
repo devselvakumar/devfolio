@@ -68,7 +68,7 @@ export default function Hero() {
       ))}
 
       {/* Content */}
-      <div className="section-padding max-w-screen-xl mx-auto w-full pt-20 md:pt-28 pb-8 md:pb-20">
+      <div className="section-padding max-w-screen-xl mx-auto w-full pt-[90px] md:pt-28 pb-10 md:pb-20">
         <motion.div
           variants={containerVariants}
           initial="hidden"
