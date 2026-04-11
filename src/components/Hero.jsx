@@ -27,7 +27,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative min-h-[100svh] md:min-h-screen flex flex-col justify-start md:justify-center overflow-hidden bg-[#FAFAFA]">
+    <section className="relative min-h-[auto] md:min-h-screen flex flex-col justify-start md:justify-center overflow-hidden bg-[#FAFAFA]">
       {/* Background grid */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -68,7 +68,7 @@ export default function Hero() {
       ))}
 
       {/* Content */}
-      <div className="section-padding max-w-screen-xl mx-auto w-full pt-[3.5rem] md:pt-28 pb-6 md:pb-20">
+      <div className="section-padding max-w-screen-xl mx-auto w-full pt-20 md:pt-28 pb-8 md:pb-20">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -79,7 +79,7 @@ export default function Hero() {
           <motion.div variants={itemVariants} className="mb-4 md:mb-6">
             <span className="tag">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-2 animate-pulse" />
-              Available for freelance work
+              Available for Work
             </span>
           </motion.div>
 

@@ -119,22 +119,17 @@
 
 /* ── Mobile spacing overrides (< 768px) ──────────────────────────────── */
 @media (max-width: 767px) {
-  /* Cap section vertical padding so no large blank gaps appear */
-  section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+  /* Hero section: no padding on the section itself.
+     Inner content div carries pt-[3.25rem] to clear the fixed navbar (h-12). */
+  .hero-section {
+    min-height: auto !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
   }
 
-  /* Hero: starts just below fixed navbar (h-12 = 3rem on mobile)
-     Section itself has no padding — inner content div handles offset via pt-[3.5rem] */
-  section:first-of-type {
-    min-height: 100svh;
-    padding-top: 0;
-    padding-bottom: 1rem;
-  }
-
-  /* Kill default browser margin on headings inside hero */
-  section:first-of-type h1 {
+  /* Kill any default browser margin on hero headings */
+  .hero-section h1,
+  .hero-section p {
     margin-top: 0;
   }
 
