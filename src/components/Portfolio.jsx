@@ -17,6 +17,7 @@ const projects = [
     year: '2024',
     tech: ['HTML', 'CSS', 'JavaScript'],
     status: 'Live',
+    image: 'https://image.thum.io/get/width/800/crop/600/https://devselvakumar.github.io/desi-trails/',
   },
   {
     id: 2,
@@ -126,25 +127,38 @@ export default function Portfolio() {
                   {/* Card header / visual */}
                   <div
                     className="relative h-48 flex items-center justify-center overflow-hidden"
-                    style={{ background: project.light }}
+                    style={{ background: project.image ? '#000' : project.light }}
                   >
-                    {/* Grid pattern */}
-                    <div
-                      className="absolute inset-0 opacity-40"
-                      style={{
-                        backgroundImage: `linear-gradient(${project.accent}15 1px, transparent 1px),
-                          linear-gradient(90deg, ${project.accent}15 1px, transparent 1px)`,
-                        backgroundSize: '24px 24px',
-                      }}
-                    />
-                    {/* Floating icon */}
-                    <motion.div
-                      className={`w-20 h-20 ${project.color} rounded-2xl shadow-xl flex items-center justify-center`}
-                      animate={{ y: [0, -8, 0], rotate: [0, 3, 0] }}
-                      transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-                    >
-                      <Icon size={32} className="text-white" />
-                    </motion.div>
+                    {project.image ? (
+                      <>
+                        <img 
+                          src={project.image} 
+                          alt={`${project.name} preview`} 
+                          className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700" 
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-gray-900/60 to-transparent pointer-events-none" />
+                      </>
+                    ) : (
+                      <>
+                        {/* Grid pattern */}
+                        <div
+                          className="absolute inset-0 opacity-40"
+                          style={{
+                            backgroundImage: `linear-gradient(${project.accent}15 1px, transparent 1px),
+                              linear-gradient(90deg, ${project.accent}15 1px, transparent 1px)`,
+                            backgroundSize: '24px 24px',
+                          }}
+                        />
+                        {/* Floating icon */}
+                        <motion.div
+                          className={`w-20 h-20 ${project.color} rounded-2xl shadow-xl flex items-center justify-center`}
+                          animate={{ y: [0, -8, 0], rotate: [0, 3, 0] }}
+                          transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                        >
+                          <Icon size={32} className="text-white" />
+                        </motion.div>
+                      </>
+                    )}
 
                     {/* Status badge */}
                     <div className="absolute top-4 right-4">
