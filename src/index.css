@@ -38,7 +38,7 @@
 
 @layer components {
   .section-padding {
-    @apply px-4 md:px-8 lg:px-12 xl:px-16;
+    @apply px-5 md:px-8 lg:px-12 xl:px-16;
   }
 
   .section-title {
@@ -114,5 +114,33 @@
     border: 1px solid transparent;
     background: linear-gradient(white, white) padding-box,
       linear-gradient(135deg, #2563EB, #60A5FA) border-box;
+  }
+}
+
+/* ── Mobile spacing overrides (< 768px) ──────────────────────────────── */
+@media (max-width: 767px) {
+  /* Cap section vertical padding so no large blank gaps appear */
+  section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  /* Hero: natural height, reduced padding so it doesn't feel hollow */
+  section:first-of-type {
+    min-height: 100svh;
+    padding-top: 2.25rem;
+    padding-bottom: 1rem;
+  }
+
+  /* Footer CTA area – tighten generous desktop padding */
+  footer > div:first-child {
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+  }
+
+  /* Footer bottom bar */
+  footer > div:last-child {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
   }
 }

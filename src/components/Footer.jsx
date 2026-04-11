@@ -17,7 +17,6 @@ const socials = [
 ]
 
 export default function Footer() {
-  const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
   const scrollTo = (href) => {
     document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -25,7 +24,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0A0A0F] text-white">
       {/* Big CTA section */}
-      <div className="section-padding max-w-screen-xl mx-auto pt-24 pb-16 border-b border-white/5">
+      <div className="section-padding max-w-screen-xl mx-auto pt-12 md:pt-24 pb-10 md:pb-16 border-b border-white/5">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
           <div>
             <p className="font-mono text-xs text-gray-500 uppercase tracking-widest mb-4">Open for work</p>
@@ -52,9 +51,9 @@ export default function Footer() {
       </div>
 
       {/* Footer bottom */}
-      <div className="section-padding max-w-screen-xl mx-auto py-10">
+      <div className="section-padding max-w-screen-xl mx-auto py-6 md:py-10">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-          {/* Logo + copy */}
+          {/* Logo + description */}
           <div>
             <div className="flex items-center gap-2 mb-3">
               <div className="w-7 h-7 rounded-lg bg-accent flex items-center justify-center">
@@ -66,9 +65,6 @@ export default function Footer() {
             </div>
             <p className="font-body text-xs text-gray-500 max-w-xs leading-relaxed">
               Building modern digital experiences.
-            </p>
-            <p className="font-mono text-[10px] text-gray-600 mt-3">
-              &copy; {new Date().getFullYear()} Selvakumar M — All rights reserved.
             </p>
           </div>
 
@@ -85,7 +81,7 @@ export default function Footer() {
             ))}
           </nav>
 
-          {/* Socials + Back to top */}
+          {/* Socials */}
           <div className="flex items-center gap-4">
             {socials.map(({ icon: Icon, href, label }) => (
               <a
@@ -99,16 +95,14 @@ export default function Footer() {
                 <Icon size={14} />
               </a>
             ))}
-            <motion.button
-              onClick={scrollTop}
-              className="ml-2 w-9 h-9 rounded-full bg-accent flex items-center justify-center hover:bg-accent-light transition-colors hover:shadow-lg hover:shadow-blue-900/50"
-              whileHover={{ scale: 1.1, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-              title="Back to top"
-            >
-              <ArrowUp size={14} />
-            </motion.button>
           </div>
+        </div>
+
+        {/* Copyright — always centered at bottom on all screens */}
+        <div className="mt-5 md:mt-8 pt-4 md:pt-6 border-t border-white/5 text-center">
+          <p className="font-mono text-[10px] text-gray-600">
+            &copy; {new Date().getFullYear()} Selvakumar M — All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

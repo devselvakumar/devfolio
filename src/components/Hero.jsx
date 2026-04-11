@@ -27,7 +27,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-[#FAFAFA]">
+    <section className="relative min-h-[calc(100svh-0px)] md:min-h-screen flex flex-col justify-center overflow-hidden bg-[#FAFAFA]">
       {/* Background grid */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -68,7 +68,7 @@ export default function Hero() {
       ))}
 
       {/* Content */}
-      <div className="section-padding max-w-screen-xl mx-auto w-full pt-28 pb-20">
+      <div className="section-padding max-w-screen-xl mx-auto w-full pt-10 md:pt-28 pb-6 md:pb-20">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -108,7 +108,7 @@ export default function Hero() {
 
           <motion.p
             variants={itemVariants}
-            className="font-body text-base text-gray-400 max-w-lg mb-10 leading-relaxed"
+            className="font-body text-base text-gray-400 max-w-lg mb-6 md:mb-10 leading-relaxed"
           >
             Focused on performance, usability, and clean code.
           </motion.p>
@@ -141,7 +141,7 @@ export default function Hero() {
       {/* Scroll indicator */}
       <motion.button
         onClick={scrollDown}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-gray-400 hover:text-accent transition-colors"
+        className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-1.5 text-gray-400 hover:text-accent transition-colors"
         animate={{ y: [0, 6, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
         initial={{ opacity: 0 }}

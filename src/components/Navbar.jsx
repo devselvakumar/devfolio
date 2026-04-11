@@ -125,7 +125,7 @@ export default function Navbar() {
                 <span className="font-sans font-bold text-white text-sm">S</span>
               </div>
               <div>
-                <div className="font-sans font-semibold text-sm text-gray-900">Selvakumar M</div>
+                <div className="font-sans font-semibold text-base text-gray-900">Selvakumar M</div>
                 <div className="font-body text-xs text-gray-400">Web Developer</div>
               </div>
             </div>
