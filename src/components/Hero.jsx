@@ -27,7 +27,7 @@ export default function Hero() {
   }
 
   return (
-    <section className="relative min-h-[calc(100svh-0px)] md:min-h-screen flex flex-col justify-center overflow-hidden bg-[#FAFAFA]">
+    <section className="relative min-h-[100svh] md:min-h-screen flex flex-col justify-start md:justify-center overflow-hidden bg-[#FAFAFA]">
       {/* Background grid */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -68,7 +68,7 @@ export default function Hero() {
       ))}
 
       {/* Content */}
-      <div className="section-padding max-w-screen-xl mx-auto w-full pt-10 md:pt-28 pb-6 md:pb-20">
+      <div className="section-padding max-w-screen-xl mx-auto w-full pt-[3.5rem] md:pt-28 pb-6 md:pb-20">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -76,7 +76,7 @@ export default function Hero() {
           className="max-w-4xl"
         >
           {/* Badge */}
-          <motion.div variants={itemVariants} className="mb-6">
+          <motion.div variants={itemVariants} className="mb-4 md:mb-6">
             <span className="tag">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-2 animate-pulse" />
               Available for freelance work
@@ -86,8 +86,8 @@ export default function Hero() {
           {/* Headline */}
           <motion.h1
             variants={itemVariants}
-            className="font-sans font-bold leading-[1.05] tracking-tighter mb-6"
-            style={{ fontSize: 'clamp(2.5rem, 8vw, 6.5rem)' }}
+            className="font-sans font-bold leading-[1.05] tracking-tighter mb-4 md:mb-6 mt-0"
+            style={{ fontSize: 'clamp(2rem, 8vw, 6.5rem)' }}
           >
             <span className="text-gray-900">Crafting</span>
             <br />
